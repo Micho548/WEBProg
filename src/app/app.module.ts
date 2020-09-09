@@ -4,24 +4,15 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MuestrasComponent } from './muestras/muestras.component';
-import { DetallesComponent } from './detalles/detalles.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    MuestrasComponent,
-    DetallesComponent,
-    NavbarComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
-    FormsModule,
-    ReactiveFormsModule
+    NgbModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [],

@@ -4,11 +4,11 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MustMatch } from '../matchValidator/must-match';
 
 @Component({
-  selector: 'app-detalles',
-  templateUrl: './detalles.component.html',
-  styleUrls: ['./detalles.component.scss']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss']
 })
-export class DetallesComponent implements OnInit {
+export class RegisterComponent implements OnInit {
 
   testForm: FormGroup;
   submitted = false;
@@ -38,12 +38,11 @@ export class DetallesComponent implements OnInit {
     });
   }
 
-
-  get f() {
+  get f(): any {
     return this.testForm.controls;
   }
 
-  onSubmit() {
+  onSubmit(): void {
     this.submitted = true;
 
     if (this.testForm.valid){
@@ -51,7 +50,7 @@ export class DetallesComponent implements OnInit {
     }
   }
 
-  onReset() {
+  onReset(): void {
     this.submitted = false;
     this.testForm.reset();
   }

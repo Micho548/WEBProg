@@ -1,5 +1,6 @@
 import {FormGroup } from '@angular/forms';
 
+// tslint:disable-next-line: typedef
 export function MustMatch(controlName: string, matchingControlName: string) {
    return (formGroup: FormGroup) => {
       const control = formGroup.controls[controlName]; // controlName= algo@otro.com
@@ -14,6 +15,5 @@ export function MustMatch(controlName: string, matchingControlName: string) {
       } else {
          matchingControl.setErrors(null);
       }
-   }
-
+   };
 }
