@@ -1,4 +1,11 @@
-<app-navbar></app-navbar>
+<nb-layout>
+   <nb-layout-header fixed>
+      <app-navbar></app-navbar>
+   </nb-layout-header>
 
-<router-outlet></router-outlet>
+   
+   <nb-layout-column>
+      <router-outlet></router-outlet>
+   </nb-layout-column>
 
+</nb-layout>
