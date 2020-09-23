@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
-import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { HttpClientModule } from '@angular/common/http';
+import { fakeBackendProvider } from './helpers/fake-backend';
 
 @NgModule({
   declarations: [
@@ -17,12 +17,10 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    NbThemeModule.forRoot({ name: 'default' }),
-    NbLayoutModule,
-    NbEvaIconsModule
+    HttpClientModule,
   ],
   schemas: [NO_ERRORS_SCHEMA],
-  providers: [],
+  providers: [fakeBackendProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

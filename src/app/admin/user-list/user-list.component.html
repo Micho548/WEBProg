@@ -1,0 +1,11 @@
+
+<nb-card status="success" *ngFor="let user of users">
+   <nb-card-header>Usuario: {{user.name}}</nb-card-header>
+   <nb-card-body>
+      Direccion: {{user.address}} <br>
+      Telefono: {{user.phone}}
+   </nb-card-body>
+   <nb-card-footer>
+      id: {{user.id}}
+   </nb-card-footer>
+</nb-card>
